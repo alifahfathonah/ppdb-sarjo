@@ -1,0 +1,10 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+class Konfigurasi_model extends CI_Model{
+
+  public function listing()
+  {
+    return $this->db->get('konfigurasi')->row_array();
+  }
+}
