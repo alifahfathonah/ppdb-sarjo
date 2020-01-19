@@ -4,3 +4,9 @@
   line-height: 1.42857143;
   color: #333;
 }
+
+.text-selamat{
+  font-size: 50px;
+  font-weight: 800;
+  background-color: rgba(255, 255, 255, 0.3);
+}

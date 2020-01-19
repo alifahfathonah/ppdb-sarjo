@@ -7,4 +7,10 @@ class Konfigurasi_model extends CI_Model{
   {
     return $this->db->get('konfigurasi')->row_array();
   }
+
+  public function update($data)
+  {
+    $this->db->where('id', 1);
+    return $this->db->update('konfigurasi', $data);
+  }
 }
