@@ -150,11 +150,9 @@ class Daftar extends CI_Controller {
     $this->form_validation->set_rules('email_siswa', 'Email Siswa', 'trim|required');
     $this->form_validation->set_rules('nama_ayah', 'Nama Ayah', 'trim|required');
     $this->form_validation->set_rules('nik_ayah', 'NIK Ayah', 'trim|required');
-    $this->form_validation->set_rules('nama_ayah', 'Nama Ayah', 'trim|required');
     $this->form_validation->set_rules('tahun_lahir_ayah', 'Tahun Lahir Ayah', 'trim|required');
     $this->form_validation->set_rules('nama_ibu', 'Nama ibu', 'trim|required');
     $this->form_validation->set_rules('nik_ibu', 'NIK ibu', 'trim|required');
-    $this->form_validation->set_rules('nama_ibu', 'Nama ibu', 'trim|required');
     $this->form_validation->set_rules('tahun_lahir_ibu', 'Tahun Lahir ibu', 'trim|required');
     $this->form_validation->set_rules('tinggi_badan', 'Tinggi Badan', 'trim|required');
     $this->form_validation->set_rules('berat_badan', 'Berat Badan', 'trim|required');
