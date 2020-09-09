@@ -271,7 +271,7 @@ class Daftar extends CI_Controller {
               Silahkan menunggu beberapa hari kemudian untuk mendapatkan email balasan. Balasan email bisa lebih cepat atau lebih lambat.
               </p>
             <hr>
-            <p class="mb-0">Kami akan mengirimkan email hasil evaluasi pada ahmatarnal@gmail.com.</p>
+            <p class="mb-0">Kami akan mengirimkan email hasil evaluasi pada '.$post['email_siswa'].'.</p>
           </div>
         ');
         redirect('home');
