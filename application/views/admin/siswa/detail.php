@@ -259,7 +259,52 @@
           </div>
         </div>
         <div class="col-md-4">
-          <img class="img-fluid img-thumbnail float-right" src="<?=base_url('data/foto/'.$siswa['foto']);?>" alt="foto siswa">
+
+					<div class="card">
+						<div class="card-header">
+							Foto 3x4
+						</div>
+						<div class="card-body">
+          		<img class="img-fluid img-thumbnail float-right" src="<?=base_url('data/foto/'.$siswa['foto']);?>" alt="foto siswa">
+						</div>
+					</div>
+
+					<div class="card">
+						<div class="card-header">
+							SHUN
+						</div>
+						<div class="card-body">
+          		<img class="img-fluid img-thumbnail float-right" src="<?=base_url('data/shun/'.$siswa['shun']);?>" alt="foto shun">
+						</div>
+					</div>
+
+					<div class="card">
+						<div class="card-header">
+							Kartu Keluarga
+						</div>
+						<div class="card-body">
+          		<img class="img-fluid img-thumbnail float-right" src="<?=base_url('data/kartu_keluarga/'.$siswa['kartu_keluarga']);?>" alt="foto kartu_keluarga">
+						</div>
+					</div>
+
+					<div class="card">
+						<div class="card-header">
+							Akta Kelahiran
+						</div>
+						<div class="card-body">
+							<img class="img-fluid img-thumbnail float-right" src="<?=base_url('data/akta/'.$siswa['akta_kelahiran']);?>" alt="foto akta kelahiran">
+						</div>
+					</div>
+
+					<div class="card">
+						<div class="card-header">
+							KTP Orang Tua
+						</div>
+						<div class="card-body">
+							<img class="img-fluid img-thumbnail float-right" src="<?=base_url('data/ktp/'.$siswa['ktp']);?>" alt="foto kartu_keluarga">
+						</div>
+					</div>
+
         </div>
       </div>
 
