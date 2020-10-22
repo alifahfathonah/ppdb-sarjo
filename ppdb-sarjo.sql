@@ -1,6 +1,6 @@
 /*
-SQLyog Community v13.1.5  (64 bit)
-MySQL - 10.4.8-MariaDB : Database - ppdb-sarjo
+SQLyog Ultimate v12.5.1 (64 bit)
+MySQL - 10.4.11-MariaDB : Database - ppdb-sarjo
 *********************************************************************
 */
 
@@ -12,10 +12,6 @@ MySQL - 10.4.8-MariaDB : Database - ppdb-sarjo
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-CREATE DATABASE /*!32312 IF NOT EXISTS*/`ppdb-sarjo` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
-
-USE `ppdb-sarjo`;
-
 /*Table structure for table `formulir` */
 
 DROP TABLE IF EXISTS `formulir`;
@@ -78,14 +74,9 @@ CREATE TABLE `formulir` (
   `status_pendaftaran` enum('Belum Diverifikasi','Diterima','Tidak Diterima') NOT NULL,
   `tanggal_pendaftaran` date DEFAULT NULL,
   PRIMARY KEY (`id`,`tempat_lahir`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Data for the table `formulir` */
-
-insert  into `formulir`(`id`,`nama_siswa`,`jenis_kelamin`,`nisn`,`nik`,`tempat_lahir`,`tanggal_lahir`,`agama_siswa`,`is_wna`,`nama_negara`,`kebutuhan_khusus`,`alamat_siswa`,`kode_pos`,`lintang`,`bujur`,`tempat_tinggal`,`moda_transportasi`,`nomor_kks`,`anak_keberapa`,`nomor_kps`,`layak_pip`,`nomor_kip`,`nama_kip`,`terima_fisik_kip`,`alasan_layak_pip`,`nomor_telepon`,`nomor_hp`,`email`,`nama_ayah`,`nik_ayah`,`tahun_lahir_ayah`,`pendidikan_ayah`,`pekerjaan_ayah`,`penghasilan_ayah`,`nama_ibu`,`nik_ibu`,`tahun_lahir_ibu`,`pendidikan_ibu`,`pekerjaan_ibu`,`penghasilan_ibu`,`nama_wali`,`nik_wali`,`tahun_lahir_wali`,`pendidikan_wali`,`pekerjaan_wali`,`penghasilan_wali`,`tinggi_badan`,`berat_badan`,`jumlah_saudara_kandung`,`shun`,`foto`,`kartu_keluarga`,`ktp`,`akta_kelahiran`,`status_pendaftaran`,`tanggal_pendaftaran`) values 
-(6,'Ahmat Arnal Kastana','Laki - laki','0009321234','6112090906021104','Beringin Jaya','2019-11-13','Islam',0,'','Tidak','Jl. S Parman, RT 1, RW 2, Dusun Ratolene, Kelurahan Kasiguncu, Kecamatan Poso Pesisir','11111','','','Bersama Orang Tua','Kendaraan Priadi','',1,'',NULL,'','',NULL,'-',NULL,'082187893504','ahmatarnal@gmail.com','Suryono','6112090906021098',1957,'SMP Sederajat','Meninggal Dunia','-','Sumiati','6112090906021104',1975,'SMA Sederajat','Wiraswasta','2 juta - 4.999.999','','',0000,'Tidak Sekolah','Tidak Bekerja','',168,50,2,'shun_51d78ad.png','foto_797f78d.png','kk_b20d5ca.png','ktp_8e8a7c8.png','akta_9bc7571.png','Tidak Diterima','2019-12-13'),
-(7,'Andrian Maulana','Laki - laki','0009321235','6112090906021104','Masamba','2019-12-18','Islam',0,'','Tidak','Jl. Trans Sulawesi, RT 1, RW 2, Dusun Ratolene, Kelurahan Kasiguncu, Kecamatan poso pesisir','12211','','','Bersama Orang Tua','Kendaraan Priadi','',2,'',NULL,'','',NULL,'-',NULL,'082187893502','divakhairil@gmail.com','Suryono','6112090906021104',1957,'SMP Sederajat','Wiraswasta','2 juta - 4.999.999','Sumiati','6112090906021104',1975,'SMA Sederajat','Wiraswasta','2 juta - 4.999.999','','',0000,'Tidak Sekolah','Tidak Bekerja','',167,52,2,'shun_93b637e.png','foto_5e86b2a.png','kk_bcaf988.png','ktp_e598c98.png','akta_88a11e2.png','Belum Diverifikasi','2019-12-11'),
-(9,'Susanti','Perempuan','0009321239','6112090906021104','Surabaya','2019-12-03','Islam',0,'','Tidak','Jl. Kemanggisan, RT 5, RW 3, Dusun , Kelurahan Petobo, Kecamatan Palu timur','55555','','','Bersama Orang Tua','Kendaraan Priadi','',3,'',NULL,'','',NULL,'-','','082187893504','devilservantx@gmail.com','sukadi','6112090906021104',1957,'SMA Sederajat','Peternak','500.000 - 999.999','Suemi','6112090906021104',1986,'D3','PNS/TNI/POLRI','500.000 - 999.999','','',0000,'Tidak Sekolah','Tidak Bekerja','',180,80,8,'shun_b6ab0ef.png','foto_98b5507.png','kk_dd6f91e.png','ktp_fab76bc.png','akta_5c030ec.png','Tidak Diterima','2019-12-03');
 
 /*Table structure for table `konfigurasi` */
 
@@ -100,13 +91,17 @@ CREATE TABLE `konfigurasi` (
   `setpengumuman` enum('Buka','Tutup') DEFAULT NULL,
   `nama_website` varchar(50) DEFAULT NULL,
   `keterangan` text DEFAULT NULL,
+  `nama_kepsek` varchar(100) DEFAULT NULL,
+  `foto_kepsek` varchar(50) DEFAULT NULL,
+  `nama_wakasek` varchar(100) DEFAULT NULL,
+  `foto_wakasek` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `konfigurasi` */
 
-insert  into `konfigurasi`(`id`,`nama_sekolah`,`alamat_sekolah`,`telepon_sekolah`,`setdaftar`,`setpengumuman`,`nama_website`,`keterangan`) values 
-(1,'SMA Negeri 1 Sarjo','JL. H.Muh.Saleh, Kabupaten Mamuju Utara, Sulawesi ','082187893503','Buka','Buka','PPDB Sarjo','Halaman ini merupakan resmi Pendaftaran Peserta Didik Baru SMA Negeri 1 Sarjo. Untuk melakukan pendaftaran silahkan klik menu daftar atau jika sudah mendaftar silahkan cetak bukti pendaftarannya melalui menu print. Untuk informasi lebih lanjut bisa menghubungi Panitia PPDB melalui No.Tlp/HP berikut 082187893504. ');
+insert  into `konfigurasi`(`id`,`nama_sekolah`,`alamat_sekolah`,`telepon_sekolah`,`setdaftar`,`setpengumuman`,`nama_website`,`keterangan`,`nama_kepsek`,`foto_kepsek`,`nama_wakasek`,`foto_wakasek`) values 
+(1,'SMA Negeri 1 Sarjo','JL. H.Muh.Saleh, Kabupaten Mamuju Utara, Sulawesi','082187893503','Buka','Buka','PPDB Sarjo','Halaman ini merupakan resmi Pendaftaran Peserta Didik Baru SMA Negeri 1 Sarjo. Untuk melakukan pendaftaran silahkan klik menu daftar atau jika sudah mendaftar silahkan cetak bukti pendaftarannya melalui menu print. Untuk informasi lebih lanjut bisa menghubungi Panitia PPDB melalui No.Tlp/HP berikut 082187893504. ','SUDIRMAN, S.PD., M.PD.','kepsek.jpg','SUPRIADI, S.PD., M.PD.','wakasek.jpg');
 
 /*Table structure for table `users` */
 
@@ -124,7 +119,7 @@ CREATE TABLE `users` (
 /*Data for the table `users` */
 
 insert  into `users`(`id`,`username`,`password`,`name`,`level`) values 
-(1,'admin','$2y$10$IlDNdUZiADODrV1l.yf3V.i18oMX262IedklBo2tlWWWtSCXqJP2i','Ahmat Arnal Kastana',1);
+(1,'admin','$2y$10$f0oOk3l8Vo8e9Cxx4jmZ..cctg5dSBpEchI.vf.WGCNsEFwaPn6Fq','Masruddin, S.Kom',1);
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;

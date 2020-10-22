@@ -42,7 +42,12 @@
                 <?=$site['alamat_sekolah'];?>       
               </div>
             </div>
-          </div>
+					</div>
+					<div class="card-footer">
+						<div class="float-right">
+							Admin : <strong><?=$admin_name;?></strong>
+						</div>
+					</div>
         </div>
 
       </div>

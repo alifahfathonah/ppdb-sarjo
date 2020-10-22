@@ -20,12 +20,12 @@
   <div class="row">
     <div class="col-md-8">
 
-      <div class="card mb-3">
-        <div class="card-header">
-
-        </div>
-        <div class="card-body">
-          <form action="<?=site_url('admin/konfigurasi/aplikasi');?>" method="post">
+			<form action="<?=site_url('admin/konfigurasi/aplikasi');?>" method="post" enctype="multipart/form-data">
+        <div class="card mb-3">
+          <div class="card-header">
+            General
+          </div>
+          <div class="card-body">
             <div class="table-responsive">
               <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <tbody>
@@ -64,14 +64,74 @@
                       <?=form_error('keterangan', '<small class="form-text text-danger">', '</small>');?>
                     </td>
                   </tr>
+                  <tr>
+                    <td>Nama Kepala Sekolah</td>
+                    <td>
+											<input class="form-control" type="text" name="nama_kepsek" id="nama_kepsek" value="<?=$site['nama_kepsek'];?>">
+                      <?=form_error('nama_kepsek', '<small class="form-text text-danger">', '</small>');?>
+                    </td>
+									</tr>
+									<tr>
+										<td>Foto Kepala Sekolah</td>
+										<td>
+											<input type="file" name="foto_kepsek" id="foto_kepsek">
+										</td>
+									</tr>
+                  <tr>
+                    <td>Nama Wakil Kepala Sekolah</td>
+                    <td>
+											<input class="form-control" type="text" name="nama_wakasek" id="nama_wakasek" value="<?=$site['nama_wakasek'];?>">
+                      <?=form_error('nama_wakasek', '<small class="form-text text-danger">', '</small>');?>
+                    </td>
+									</tr>
+									<tr>
+										<td>Foto Wakil Kepala Sekolah</td>
+										<td>
+											<input type="file" name="foto_wakasek" id="foto_wakasek">
+										</td>
+									</tr>
                 </tbody>
               </table>
             </div>
-            <button type="submit" class="btn btn-primary">Sumbit</button>
-          </form>
-
-        </div>
-      </div>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card-header">
+						User
+					</div>
+					<div class="card-body">
+					<div class="table-responsive">
+							<input type="hidden" name="id_admin" value="<?=$admin->id;?>">
+              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <tbody>
+                  <tr>
+                    <td>Nama Admin</td>
+                    <td>
+                      <input class="form-control" type="text" name="nama_admin" id="nama_admin" value="<?=$admin->name;?>">
+                      <?=form_error('nama_admin', '<small class="form-text text-danger">', '</small>');?>
+                    </td>
+									</tr>
+									<tr>
+										<td>Username</td>
+										<td>
+											<input class="form-control" type="text" name="username" id="username" value="<?=$admin->username;?>">
+											<?=form_error('username', '<small class="form-text text-danger">', '</small>');?>
+										</td>
+									</tr>
+									<tr>
+										<td>Kata Sandi</td>
+										<td>
+											<input class="form-control" type="password" name="password" id="password">
+											<?=form_error('password', '<small class="form-text text-danger">', '</small>');?>
+										</td>
+									</tr>
+                </tbody>
+              </table>
+            </div>
+					</div>
+				</div>
+        <button type="submit" class="btn btn-primary mt-3 mb-3">Sumbit</button>
+			</form>
 
     </div>
   </div>

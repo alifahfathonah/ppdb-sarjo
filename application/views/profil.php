@@ -9,7 +9,42 @@
     <h1 class="pt-5">Visi & Misi</h1>
     <div class="row">
       <div class="col-md-12">
-        <img class="img-fluid" width="100%" src="<?=base_url('assets/img/header.jpeg');?>" alt="" srcset="">
+        
+				<div class="row">
+				
+					<div class="col">
+						<div class="card">
+							<div class="card-body">
+								<img height="550px" width="100%" src="<?=base_url('assets/img/visi/'.$site['foto_kepsek']);?>" alt="" class="">
+							</div> 
+							<div class="card-footer">
+								<div class="card-title text-center">
+									<?=$site['nama_kepsek'];?>
+								</div>
+								<div class="text-muted text-center">
+									- Kepala Sekolah -
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card">
+							<div class="card-body">
+								<img height="550px" width="100%" src="<?=base_url('assets/img/visi/'.$site['foto_wakasek']);?>" alt="" class="">
+							</div>
+							<div class="card-footer">
+								<div class="card-title text-center">
+									<?=$site['nama_wakasek'];?>
+								</div>
+								<div class="text-muted text-center">
+									- Wakil Kepala Sekolah -
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
       </div>
       <div class="col-md-12">
 

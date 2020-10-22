@@ -3,10 +3,12 @@ function konfigurasi($title, $c_des=null)
 {
   $CI = get_instance();
   $CI->load->model('Konfigurasi_model');
+  $admin = $CI->db->get_where('users', ['level' => 1])->row();
   $site = $CI->Konfigurasi_model->listing();
   $data = array(
     'title'        => $title.' | '.$site['nama_website'],
-    'site'         => $site,
+	'site'         => $site,
+	'admin_name'   => $admin->name
   );
   return $data;
 }
@@ -178,4 +180,17 @@ function timeAgo2($timestamp)
         $go=$isi;
     }
     return $go;
+}
+
+function dd(...$params){
+	echo '<pre>';
+	var_dump($params);
+	echo '</pre>';
+	die;
+}
+
+function removeFile($filepath){
+	if(file_exists($filepath)){
+		unlink($filepath);
+	}
 }
